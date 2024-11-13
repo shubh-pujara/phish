@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Information Form</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-group label {
+            font-size: 16px;
+            color: #555;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: #f9f9f9;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #4CAF50;
+            background: #fff;
+        }
+
+        .form-group textarea {
+            height: 100px;
+        }
+
+        .submit-btn {
+            background: #4CAF50;
+            color: white;
+            padding: 12px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background: #45a049;
+        }
+
+        .footer {
+            font-size: 14px;
+            color: #777;
+            margin-top: 20px;
+        }
+
+        .footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        .emoji {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 600px) {
+            .form-container {
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            .form-group input,
+            .form-group textarea {
+                font-size: 14px;
+            }
+
+            .submit-btn {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <div class="emoji">🔒</div>
+    <h2>Employee Information Verification</h2>
+    <p>Please fill in the details below for confirmation</p>
+
+    <form method="POST" action="/submit">
+        <div class="form-group">
+            <label for="emp_id">Employee ID</label>
+            <input type="text" id="emp_id" name="emp_id" placeholder="Enter your Employee ID" required>
+        </div>
+
+        <div class="form-group">
+            <label for="emp_designation">Employee Designation</label>
+            <input type="text" id="emp_designation" name="emp_designation" placeholder="Enter your Designation" required>
+        </div>
+
+        <div class="form-group">
+            <label for="mobile_no">Mobile Number</label>
+            <input type="text" id="mobile_no" name="mobile_no" placeholder="Enter your Mobile Number" required>
+        </div>
+
+        <div class="form-group">
+            <label for="delivery_address">Delivery Address</label>
+            <textarea id="delivery_address" name="delivery_address" placeholder="Enter your Delivery Address" required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit</button>
+    </form>
+
+    <div class="footer">
+        <p>By submitting, you agree to our <a href="#">Terms & Conditions</a>.</p>
+    </div>
+</div>
+
+</body>
+</html>
